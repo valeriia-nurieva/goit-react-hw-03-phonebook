@@ -10,7 +10,7 @@ const INITIAL_STATE = {
 class Form extends Component {
   static defaultProps = {
     onSubmit: PropTypes.func.isRequired,
-    contact: PropTypes.arrayOf(
+    contacts: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.string,
         name: PropTypes.string,
