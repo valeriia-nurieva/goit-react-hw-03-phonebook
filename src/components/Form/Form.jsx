@@ -8,17 +8,6 @@ const INITIAL_STATE = {
 };
 
 class Form extends Component {
-  static defaultProps = {
-    onSubmit: PropTypes.func.isRequired,
-    contacts: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string,
-        name: PropTypes.string,
-        number: PropTypes.string,
-      })
-    ).isRequired,
-  };
-
   state = INITIAL_STATE;
 
   handleChange = e => {
@@ -78,5 +67,16 @@ class Form extends Component {
     );
   }
 }
+
+Form.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      number: PropTypes.string,
+    })
+  ).isRequired,
+};
 
 export default Form;
